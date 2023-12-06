@@ -4,20 +4,21 @@
  */
 package practica6_gualpamathias;
 
+import java.io.*;
 import java.util.Comparator;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.Scanner;
 /**
  *
  * @author ESPE
  */
 public class IngresoLibro {
-    
-    
- private List<Libros> pilaLibros = new ArrayList<>();
+         private List<Libros> pilaLibros = new ArrayList<>();
          private List<Libros> libregalados = new ArrayList<>();
+         
          private List<Libros> lib = new ArrayList<>();
 
          public void agregarLibro(Libros libro) {
@@ -78,9 +79,48 @@ public class IngresoLibro {
                System.out.println("Año de Edicion: " + libro.getAnioEdicion());
            });
        }
-   }
 
 
+       public int contarLibrosRegalados() {
+           // Contar libros regalados
+           int cantidadLibrosRegalados = libregalados.size();
+           System.out.println("Cantidad total de libros regalados: " + cantidadLibrosRegalados);
+           return cantidadLibrosRegalados;
+       }
+
+       public void modificarInformacionLibro(String titulo) {
+ 
+    }
+
+    public void guardarEnArchivoTXT(String nombreArchivo) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(nombreArchivo))) {
+            for (Libros libro : lib) {
+                writer.write(libro.getTitulo() + ";" + libro.getAutor() + ";" + libro.getAnioEdicion() + "\n");
+            }
+            System.out.println("Información guardada en formato TXT correctamente.");
+        } catch (IOException e) {
+            System.out.println("Error al guardar la información en formato TXT.");
+            e.printStackTrace();
+        }
+    }
+
+    public void buscarLibrosPorRangoAnios(int anioInicio, int anioFin) {
+        System.out.println("Libros en el rango de años " + anioInicio + " a " + anioFin + ":");
+        lib.stream()
+                .filter(libro -> libro.getAnioEdicion() >= anioInicio && libro.getAnioEdicion() <= anioFin)
+                .forEach(libro -> {
+                    System.out.println("------------------------------------");
+                    System.out.println("Titulo: " + libro.getTitulo());
+                    System.out.println("Autor: " + libro.getAutor());
+                    System.out.println("Año de Edicion: " + libro.getAnioEdicion());
+           }
+        );
+    }
+}
+
+   
+
+   
 
 
 

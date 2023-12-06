@@ -26,7 +26,10 @@ public class MenuLibros {
             System.out.println("2. Mosrar Libros en el ecritorio si hay o no hay libros");
             System.out.println("3. Regalar libros de pila ");
             System.out.println("4. Guardar libro en biblioteca en orden alfabetico");
-            System.out.println("5. Salir");
+            System.out.println("5. Modificar libro");
+            System.out.println("6. Guardar libros en ficheros");
+            System.out.println("7. Buscar libros por rango de fecha y mostrar");
+            System.out.println("8. Salir");
             opc=scanner.nextInt();
             scanner.nextLine();
             switch(opc){
@@ -51,8 +54,30 @@ public class MenuLibros {
                 case 4:
                     lib.guardarLibros();
                     lib.mostrarLibrosOrdenados();
-                    break;  
+                    break;
                 case 5:
+                      System.out.print("Ingrese el título del libro a modificar: ");
+                      String tituloModificar = scanner.nextLine();
+                      lib.modificarInformacionLibro(tituloModificar);
+               break;
+                case 6:
+                
+                System.out.print("Ingrese el nombre del archivo para guardar en formato TXT: ");
+                String nombreArchivoTXT = scanner.nextLine();lib.guardarEnArchivoTXT(nombreArchivoTXT);
+                break;
+                case 7:
+                    System.out.print("Ingrese el año de inicio del rango: ");
+                    int anioInicio = scanner.nextInt();
+                    System.out.print("Ingrese el año de fin del rango: ");
+                    int anioFin = scanner.nextInt();
+                    lib.buscarLibrosPorRangoAnios(anioInicio, anioFin);
+                    break;
+                    
+                case 8:
+                   // lib.buscarLibrosPorRangoAnios(anioInicio, anioFin);
+                   
+                    break;
+                case 9:
                     //Opcion de salir
                     System.out.println("Fin del programa");
                     break;
@@ -60,8 +85,7 @@ public class MenuLibros {
                     System.out.println("Opcion incorrecta");
                     break;
             }
-        }while(opc!=5);
+        }while(opc!=8);
     }
 }
-
 
