@@ -6,10 +6,6 @@ package u2practica3_ordenar;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Usuario
- */
 public class MenuOpciones {
    
     public void menu(){
