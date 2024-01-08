@@ -6,10 +6,6 @@ package u2practica3_ordenar;
 
 import java.util.Scanner;
 
-/**
- *
- * @author gisse
- */
 public class ArregloSeleccion {
     
     public void menuSeleccion(){
