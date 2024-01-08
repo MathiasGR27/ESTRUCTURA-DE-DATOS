@@ -4,10 +4,7 @@
  */
 package u2practica3_ordenar;
 
-/**
- *
- * @author gisse
- */
+
 public class OrdenSeleccion {
     public static void inicio(){
     /*
