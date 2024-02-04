@@ -1,18 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package u2practica3_ordenar;
 
 import java.util.Scanner;
-
 
 public class OrdenarInsercion {
     public static void inicio(){
         
     // creamos instancia de la clase ArregloInsercion con una capacidad para almacenar 10 elementos
 		ArregloInsercion arr=new ArregloInsercion(10);
-		
 		// insertamos 6 valores al arreglo
 		arr.insertar(16);
 		arr.insertar(11);

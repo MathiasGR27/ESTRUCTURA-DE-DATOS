@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package u2practica3_ordenar;
 
 import java.util.Scanner;
@@ -12,10 +8,8 @@ public class OrdenacionShellApp {
 	public static void inicio() {
 		/*
 		 Dado un numero entero no negativo, retornarlo con sus digitos en orden descendente
-		 */
-		
-		ArregloShell arr;
-		
+		 */		
+		ArregloShell arr;	
 		// Ingresamos numero a analizar
 		Scanner scanner=new Scanner(System.in);
 		System.out.print("Ingrese numero entero: ");

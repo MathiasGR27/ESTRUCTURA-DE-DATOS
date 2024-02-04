@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package u2practica3_ordenar;
 
 import java.util.Scanner;
@@ -10,7 +6,6 @@ import java.util.Scanner;
 public class OrdenarBurbuja {
     public static void inicio(){
         Scanner entrada=new Scanner(System.in);
-        // TODO code application logic here
         // problema: calcular el maximo y el minimo valor de un conjunto de N datos
         // variable que guarda los valores ingresados por el teclado
         long dato;

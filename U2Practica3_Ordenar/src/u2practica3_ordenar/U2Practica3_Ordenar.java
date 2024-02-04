@@ -8,8 +8,7 @@ import java.util.Scanner;
 
 public class U2Practica3_Ordenar {
 
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) {   
         MenuOpciones menu = new MenuOpciones();
         menu.menu();
     }

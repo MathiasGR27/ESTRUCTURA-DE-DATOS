@@ -6,12 +6,10 @@ package u2practica3_ordenar;
 
 import java.util.Scanner;
 
-
 public class ArregloBurbuja {
      
     public void  MenuBurbuja() {
         Scanner scanner = new Scanner(System.in);
-
         int opc;
         boolean  regresarMenuPrincipal = false;
         
@@ -154,7 +152,7 @@ for(i=0;i<j;i++) {
 if(arr[i]>arr[i+1]) { // si elemento en la posicion ies mayor al elemento en la posicion
 // i+1 se intercambian posiciones
 long temp = arr[i]; // guarda en la variable temporal temp el elemento en la posicion i
-arr[i] = arr[i+1]; // asigna en la posicion i el valor en la posicion i+1
+arr[i] = arr[i+1]; // asigna en la posicion i el valor en la posicion i+1   
 arr[i+1] = temp;// asigna en la posicion i+1 el valor de la variable temporal temp
 }
 }
